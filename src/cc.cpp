@@ -197,11 +197,9 @@ void CustomController::computeFast()
 
 void CustomController::computeThread3()
 {
-    if (rd_.tc_.mode == 7)
-    {
 
-    }
 }
+
 void CustomController::computePlanner()
 {
 
@@ -1637,31 +1635,31 @@ void CustomController::computeIkControl(const Eigen::Isometry3d &float_trunk_tra
     //TODO 2
     //Calculate the joint angles to implement the pelvis and foot trajectory
     //Fill the Vector variables for D (Distance from pelvis to hip)
-    L_D(0) = 0.0;
-    L_D(1) = 0.0;
-    L_D(2) = 0.0;
+    L_D(0) = ;
+    L_D(1) = ;
+    L_D(2) = ;
 
-    R_D(0) = 0.0;
-    R_D(1) = 0.0;
-    R_D(2) = 0.0;
+    R_D(0) = ;
+    R_D(1) = ;
+    R_D(2) = ;
 
     //Calculate the Vector variables for r (Vector from ankle to hip)
-    L_r = 0.0;
-    R_r = 0.0;
+    L_r = ;
+    R_r = ;
 
     
     double R_C = 0, L_C = 0, L_upper = 0.351, L_lower = 0.351, R_alpha = 0, L_alpha = 0;
     
     //Calculate the size of Vector r (Distance from ankle to hip)
-    L_C = 0.0;
-    R_C = 0.0;
+    L_C = ;
+    R_C = ;
      
     double knee_acos_var_L = 0;
     double knee_acos_var_R = 0;
 
     //Calculate the cos(PI - q7)
-    knee_acos_var_L = 0.0;
-    knee_acos_var_R = 0.0;
+    knee_acos_var_L = ;
+    knee_acos_var_R = ;
 
     //Do not Touch
     //MinMax Cut for the calculated value for the safety of real robot.
@@ -1669,16 +1667,16 @@ void CustomController::computeIkControl(const Eigen::Isometry3d &float_trunk_tra
     knee_acos_var_R = DyrosMath::minmax_cut(knee_acos_var_R, -0.99, + 0.99);
 
     //Calculate the q7(left knee), q13(right knee)
-    q_des(3) = 0.0;
-    q_des(9) = 0.0;
+    q_des(3) = ;
+    q_des(9) = ;
     
     //Calculate the ankle alpha
-    L_alpha = 0.0;
-    R_alpha = 0.0;
+    L_alpha = ;
+    R_alpha = ;
     
     //Calculate the q8(left ankle pitch), q14(right ankle pitch)
-    q_des(4)  = 0.0;
-    q_des(10) = 0.0;
+    q_des(4)  = ;
+    q_des(10) = ;
 
     Eigen::Matrix3d R_Knee_Ankle_Pitch_rot_mat, L_Knee_Ankle_Pitch_rot_mat;
     Eigen::Matrix3d R_Ankle_Roll_rot_mat,       L_Ankle_Roll_rot_mat;
@@ -1696,23 +1694,23 @@ void CustomController::computeIkControl(const Eigen::Isometry3d &float_trunk_tra
     R_Hip_rot_mat.setZero();
 
     //Calculate the rotation matrix for hip
-    L_Hip_rot_mat = 0.0;
-    R_Hip_rot_mat = 0.0;
+    L_Hip_rot_mat = ;
+    R_Hip_rot_mat = ;
 
 
-    q_des(0) = 0.0;         // Hip yaw
-    q_des(1) = 0.0;         // Hip roll    
-    q_des(2) = 0.0;         // Hip pitch
+    q_des(0) = ;         // Hip yaw
+    q_des(1) = ;         // Hip roll    
+    q_des(2) = ;         // Hip pitch
     q_des(3) = q_des(3); // Knee pitch
     q_des(4) = q_des(4); // Ankle pitch
-    q_des(5) = 0.0;         // Ankle roll
+    q_des(5) = ;         // Ankle roll
 
-    q_des(6)  = 0.0;
-    q_des(7)  = 0.0;
-    q_des(8)  = 0.0;
+    q_des(6)  = ;
+    q_des(7)  = ;
+    q_des(8)  = ;
     q_des(9)  = q_des(9);
     q_des(10) = q_des(10);
-    q_des(11) = 0.0;
+    q_des(11) = ;
 }
 
 void CustomController::circling_motion()
