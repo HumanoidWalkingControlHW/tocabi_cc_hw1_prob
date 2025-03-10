@@ -12,8 +12,8 @@ set -e  # Stop script on error
 
 echo "[DYROS] HW1 Settings..."
 
-cd ~/catkin_ws_hw/src/dyros_tocabi_v2
+cd ~/catkin_ws/src/dyros_tocabi_v2
 git checkout 5b63b2bd010b1a0a185d9b2d28da171639db2e54
-cd ~/catkin_ws_hw/src
+cd ~/catkin_ws/src
 rm -rf tocabi_cc
 mv tocabi_cc_hw1_prob tocabi_cc
