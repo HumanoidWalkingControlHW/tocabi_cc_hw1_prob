@@ -1678,9 +1678,9 @@ void CustomController::computeIkControl(const Eigen::Isometry3d &float_trunk_tra
     q_des(4)  = ;
     q_des(10) = ;
 
-    Eigen::Matrix3d R_Knee_Ankle_Pitch_rot_mat, L_Knee_Ankle_Pitch_rot_mat;
-    Eigen::Matrix3d R_Ankle_Roll_rot_mat,       L_Ankle_Roll_rot_mat;
-    Eigen::Matrix3d R_Hip_rot_mat,              L_Hip_rot_mat;
+    Eigen::Matrix3d R_Knee_Ankle_Y_rot_mat, L_Knee_Ankle_Y_rot_mat;
+    Eigen::Matrix3d R_Ankle_X_rot_mat,      L_Ankle_X_rot_mat;
+    Eigen::Matrix3d R_Hip_rot_mat,          L_Hip_rot_mat;
 
     //Calculate the rotation matrix for knee and ankle pitch, ankle roll
     //rotateWithX(a) : Returns rotation matrix with axis X and degree a.
